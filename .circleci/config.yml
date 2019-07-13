@@ -7,7 +7,10 @@ jobs:
     steps:
       - checkout
       - run: rake pdf
-      - run: ./publish_pdf_to_s3.sh
+      - run: ls -l cognito_user_migration.pdf
+      - store_artifacts:
+          path: ~/work/cognito_user_migration.pdf
+          destination: pdf
 
 workflows:
   version: 2
