@@ -1,0 +1,33 @@
+# coding: utf-8
+
+## Starter独自設定
+starter:
+
+  ## 出力のターゲット。環境変数 $STARTER_TARGET で上書き可能。
+  ## * pbook: 印刷用のモノクロPDFを出力。printing bookの略。
+  ## * ebook: 電子用のカラーPDFを出力。electric bookの略。
+  ## * tablet: タブレット用のカラーPDFを出力。
+  target: tablet
+
+  ## 章(Chapter)タイトルの装飾
+  ## （none: なし、underline: 下線、boldlines: 上下に太線）
+  chapter_decoration: boldlines
+
+  ## 章(Chapter)タイトルの左寄せ/右寄せ/中央揃え
+  ## （left: 左寄せ、right: 右寄せ、center: 中央揃え）
+  chapter_align: center
+
+  ## 章(Chapter)タイトルを1行にする（章番号とタイトルとの間で改行しない）
+  chapter_oneline: false
+
+  ## 節(Section)ごとに改ページするか
+  ## （ただし各章の最初の節は改ページしない）
+  section_newpage: true
+
+  ## 節(Section)タイトルの装飾
+  ## （none: なし、line: 下線、grayback: 灰色の背景色）
+  section_decoration: underline
+
+  ## 小節(Subsection)タイトルの装飾
+  ## （none: なし、symbol: 先頭にクローバー）
+  subsection_decoration: symbol
