@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: kauplan/review2.5
+    working_directory: ~/work
+    steps:
+      - checkout
+      - run: rake pdf
+      - run: ./publish_pdf_to_s3.sh
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build:
+          context: hiroga-aws
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /deploy/
