@@ -1,2 +1,3 @@
 cognito_user_migration-pdf
 *.pdf
+.local
