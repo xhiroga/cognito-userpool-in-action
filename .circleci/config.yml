@@ -22,7 +22,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/work
-      - run: ./publish_pdf_to_s3.sh
+      - run: aws s3 cp cognito_user_migration.pdf s3://hiroga-cognito-user-migration/cognito_user_migration.pdf --acl public-read
 
 workflows:
   version: 2
