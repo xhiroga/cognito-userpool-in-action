@@ -11,12 +11,30 @@ jobs:
       - store_artifacts:
           path: ~/work/cognito_user_migration.pdf
           destination: pdf
+      - persist_to_workspace:
+          root: ~/work
+          paths:
+            - cognito_user_migration.pdf
+  deploy:
+    docker:
+      - image: justincasetech/aws-cli:1.16.186-jq1.6-git
+    working_directory: ~/work
+    steps:
+      - attach_workspace:
+          at: ~/work
+      - run: ls -la
 
 workflows:
   version: 2
   build:
     jobs:
       - build:
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /deploy/
+      - deploy:
           context: hiroga-aws
           filters:
             branches:
