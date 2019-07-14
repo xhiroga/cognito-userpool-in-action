@@ -41,3 +41,5 @@ workflows:
               only: master
             tags:
               only: /deploy/
+          requires:
+            - build
