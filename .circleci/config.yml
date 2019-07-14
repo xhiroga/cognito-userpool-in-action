@@ -22,11 +22,11 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/work
-      - run: bash ./publish_pdf_to_s3.sh
+      - run: ./publish_pdf_to_s3.sh
 
 workflows:
   version: 2
-  build:
+  workflow:
     jobs:
       - build:
           filters:
