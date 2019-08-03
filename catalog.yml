@@ -2,11 +2,13 @@ PREDEF:
   - chap00-preface.re
 
 CHAPS:
+  - chap01-starter.re
+  - chap02-faq.re
   - chap01-cognito-basic.re
   - chap02-userpool-best-practice.re
-  - chap03-user-migration.re
-  - chap04-user-migration-lambda-in-detail.re
-  - chap05-user-migration-with-federated-itentity.re
+  # - chap03-user-migration.re
+  # - chap04-user-migration-lambda-in-detail.re
+  # - chap05-user-migration-with-federated-itentity.re
 
 APPENDIX:
 
