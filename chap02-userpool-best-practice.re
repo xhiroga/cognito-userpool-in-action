@@ -40,11 +40,12 @@ UserPoolでは、メールアドレス・電話番号・preferred_username（ユ
 
 
 === メールの送信元にAWS SESを設定する。
-メールアドレスの検証や初期パスワードの送信などで、ユーザーにメールを送信することがあります。UserPoolではデフォルトのメールの設定がありますが、以下の理由から利用するのは開発環境などに限定したほうがよいでしょう。
+メールアドレスの検証や初期パスワードの送信などで、ユーザーにメールを送信することがあります。UserPoolではデフォルトのメールの設定がありますが、以下の理由から利用するのは開発環境などに限定したほうがよいでしょう。@<fn>{993B91D2}
 
  * メールの送信元ドメインが `no-reply@verificationemail.com` になってしまう。
  * 1日に送信できるUserPoolあたりのメールの数などに制限がかかっている。
 
+//footnote[993B91D2][公式ドキュメントでも案内があります。@<href>{https://docs.aws.amazon.com/ja_jp/cognito/latest/developerguide/user-pool-email.html}]
 
 =={sec-ext} 開発のオススメ
 
