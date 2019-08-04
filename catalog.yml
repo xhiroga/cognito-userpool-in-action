@@ -3,8 +3,8 @@ PREDEF:
   - chap00-introduction.re
 
 CHAPS:
-  - chap01-starter.re
-  - chap02-faq.re
+  # - chap01-starter.re
+  # - chap02-faq.re
   - chap01-cognito-basic.re
   - chap02-userpool-best-practice.re
   - chap03-user-migration.re

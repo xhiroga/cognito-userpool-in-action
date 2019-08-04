@@ -26,9 +26,9 @@ language: ja
 # 読みを入れる例 booktitle: {name: "Re:VIEW EPUBサンプル", file-as: "リビューイーパブサンプル"}
 # （タイトルやサブタイトルが長い場合は、好みの箇所に改行を入れてください。）
 booktitle: |-
-  AWS Cognito 実践ユーザー移行入門
+  AWS Cognito UserPool ユーザー移行入門
 subtitle: |-
-  UserPoolの基礎からユーザー移行Lambdaトリガーまで
+  UserPoolの基本からユーザー移行Lambdaトリガーまで
 
 # 著者名。「, 」で区切って複数指定できる
 # 読みを入れる例 aut: [{name: "青木峰郎", file-as: "アオキミネロウ"}, {name: "武藤健志", file-as: "ムトウケンシ"}, {name: "高橋征義", file-as: "タカハシマサヨシ"}, {name: "角征典", file-as: "カドマサノリ"}]
