@@ -4,7 +4,6 @@
 UserPoolとFederated Identityの違いとか
 //}
 
-Draft
 
 =={sec-ext} Cognitoの3つのサービス
 
