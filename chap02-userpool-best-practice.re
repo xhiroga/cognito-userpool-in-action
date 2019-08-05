@@ -62,7 +62,7 @@ UserPoolでは、メールアドレス・電話番号・preferred_username（ユ
 デメリット: update-user-pool の仕様として、値を指定しなかった属性は初期値が設定されてしまう。したがって、結局は宣言的な書き方をすることになる。
 
 
-==== CloudoFormation・CDK
+==== CloudFormation・CDK
 メリット: UserPoolクライアントやFederated Identityの関係性をコードで表現できる。Lambdaトリガーを設定する際に、都度ARNを調べないことが可能。
 デメリット: 2019-08-03時点で、ユーザー移行LambdaトリガーがCloudFormationに対応していない。
 
