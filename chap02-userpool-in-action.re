@@ -1,10 +1,30 @@
-= UserPoolの設定・開発のオススメ
+= 実践UserPool
 
 //abstract{
 UserPoolの初期設定・開発のオススメを紹介します。
 //}
 
-=={sec-ext} 設定のオススメ
+=={sec-ext} UserPoolを採用したアーキテクチャ
+コンシューマー向けのWebサイトにおいて、Cognitoを採用したあアーキテクチャを2通り紹介します。
+ユースケースとしては、他にもSPAにログイン機能を実装するケースや、エンタープライズの認証基盤の認証基盤として使うケースがありますが、それらについてはAWSの公式ドキュメントを参照ください。@<fn>{a81b8f32}
+//footnote[a81b8f32][AWS Black Belt Online Seminar 2017 AWSにおけるアプリ認証パターンのご紹介https://www.slideshare.net/AmazonWebServicesJapan/aws-black-belt-online-seminar-2017-aws-80642202]
+
+
+=== UserPoolをユーザー認証・認可基盤として利用するケース
+UserPoolをユーザー認証基盤として用い、同時に認可の役割も持たせるケースです。
+
+図: [ UserPool → API Gateway(UserPool認証) → バックエンド]
+解説...
+
+
+=== UserPoolをユーザー認証基盤として利用し、ユーザー認可に別サービスを用いるケース
+UserPoolをユーザー認証基盤として用い、認可は別のサービスに任せるケースです。認可を担うサービスとしては、例えばCognito Federated Identity, Authleteなどがあります。@<fn>{f5873f66}
+//footnote[f5873f66][認可サービス側から見た場合、Semi-Hosted Serviceパターンにあたります。 https://qiita.com/TakahikoKawasaki/items/b2a4fc39e0c1a1949aab]
+
+図: [UserPool → ...]
+解説...
+
+=={sec-ext} UserPoolのオススメの設定
 
 
 === 全てのエイリアス属性を設定する

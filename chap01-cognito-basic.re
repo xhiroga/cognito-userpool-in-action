@@ -48,14 +48,3 @@ Identity Providerと呼ばれることもあります。@<fn>{DC0092D6-2FE6-4F34
 多くのケースではUserPoolだけを利用していれば問題ありません。
 
 //footnote[DC0092D6-2FE6-4F34-967F-EABA1E637EFE][Identityという単語はFederated Identityにも入っていて紛らわしいのですが、要はProviderという単語が入っていればUserPoolのことを指しています。]
-
-
-=={sec-ext} UserPoolを利用したアーキテクチャ
-
-（執筆中...）
-
-メモ:
-* ユースケースというより、モバイル/PWAにしぼったアーキテクチャ
-* IAM認証かUserPool認証か、だけあればいいと思う。
-* 普通のWebサイトやエンタープライズについてはBlackBelt見たほうがいい
-

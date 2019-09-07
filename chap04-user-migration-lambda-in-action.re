@@ -1,4 +1,4 @@
-= 詳解ユーザー移行Lambdaトリガー
+= 実践ユーザー移行Lambdaトリガー
 
 //abstract{
 
