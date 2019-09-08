@@ -1,10 +1,7 @@
 PREDEF:
-  # - chap00-preface.re
   - chap00-introduction.re
 
 CHAPS:
-  # - chap01-starter.re
-  # - chap02-faq.re
   - chap01-cognito-basic.re
   - chap02-userpool-in-action.re
   - chap03-user-migration-basic.re
