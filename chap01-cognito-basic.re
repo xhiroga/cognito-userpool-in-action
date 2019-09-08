@@ -1,7 +1,7 @@
 = Cognitoの基本
 
 //abstract{
-Amazon Cognitoには、役割の違う3つのサービスがあります。本章ではそれらのサービスを紹介し、その上でどうしてCognito UserPoolを利用すべきかについて解説します。
+Amazon Cognitoには、役割の違う3つのサービスがあります。本章ではそれらのサービスを紹介し、その上でどのようなケースでCognito UserPoolを利用すべきかについて解説します。
 //}
 
 
