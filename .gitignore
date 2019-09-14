@@ -1,3 +1,4 @@
-cognito_user_migration-pdf
+cognito_userpool_in_action*-pdf
 *.pdf
+.DS_Store
 .local

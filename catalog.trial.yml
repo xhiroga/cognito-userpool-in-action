@@ -1,0 +1,15 @@
+PREDEF:
+  - chap00-introduction.trial.re
+
+CHAPS:
+  - chap01-cognito-basic.re
+  - chap02-userpool-in-action.trial.re
+  - chap03-user-migration-basic.re
+  - chap04-user-migration-lambda-in-action.trial.re
+  - chap05-user-migration-with-federated-itentity.trial.re
+  - chap06-shoulders-of-giants.re
+
+APPENDIX:
+
+POSTDEF:
+  - chap99-postscript.trial.re

@@ -18,7 +18,7 @@ review_version: 2.0
 inherit: ["config-starter.yml"]
 
 # ブック名(ファイル名になるもの。ASCII範囲の文字を使用)
-bookname: cognito_user_migration
+bookname: cognito_userpool_in_action
 # 記述言語。省略した場合はja
 language: ja
 
@@ -26,15 +26,15 @@ language: ja
 # 読みを入れる例 booktitle: {name: "Re:VIEW EPUBサンプル", file-as: "リビューイーパブサンプル"}
 # （タイトルやサブタイトルが長い場合は、好みの箇所に改行を入れてください。）
 booktitle: |-
-  AWS Cognito UserPool ユーザー移行入門
+  Amazon Cognito UserPool 実践入門
 subtitle: |-
   UserPoolの基本からユーザー移行Lambdaトリガーまで
 
 # 著者名。「, 」で区切って複数指定できる
 # 読みを入れる例 aut: [{name: "青木峰郎", file-as: "アオキミネロウ"}, {name: "武藤健志", file-as: "ムトウケンシ"}, {name: "高橋征義", file-as: "タカハシマサヨシ"}, {name: "角征典", file-as: "カドマサノリ"}]
 aut:
-  - name:    さわら（@hiroga_cc）
-    file-as: サワラ
+  - name:    小笠原寛明（@hiroga_cc）
+    file-as: オガサワラヒロアキ
 
 # 以下はオプション
 # 以下はオプション(autと同じように配列書式で複数指定可能)。
