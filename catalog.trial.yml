@@ -1,5 +1,6 @@
 PREDEF:
-  - chap00-introduction.trial.re
+  - chap00-trial.re
+  - chap00-introduction.re
 
 CHAPS:
   - chap01-cognito-basic.re

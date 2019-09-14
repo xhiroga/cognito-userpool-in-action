@@ -1,4 +1,5 @@
 cognito_userpool_in_action*-pdf
+config.yml
 *.pdf
 .DS_Store
 .local

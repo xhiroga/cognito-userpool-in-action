@@ -8,11 +8,11 @@ build at local
 ```
 # trial
 ln -f config.trial.yml config.yml
-docker-compose run --rm review && open cognito_user_migration.pdf
+docker-compose run --rm review && open cognito_userpool_in_action_trial.pdf
 
 # prod
 ln -f config.prod.yml config.yml
-docker-compose run --rm review && open cognito_user_migration.pdf
+docker-compose run --rm review && open cognito_user_in_action_trial.pdf
 ```
 
 #References
