@@ -6,7 +6,11 @@ jobs:
     working_directory: ~/work
     steps:
       - checkout
-      - run: rake pdf
+      - run: 
+          name: create pdf
+          command: |
+            ln -f config.prod.yml config.yml
+            rake pdf
       - run: ls -l cognito_user_migration.pdf
       - store_artifacts:
           path: ~/work/cognito_user_migration.pdf
