@@ -189,7 +189,7 @@ titlepage: true
 #   latex: "listings"
 
 # カタログファイル名を指定する
-# catalogfile: catalog.yml
+catalogfile: catalog.prod.yml
 
 # 1ページの行数文字数と1kbごとのページ数を用紙サイズで指定する(A5 or B5)。
 # page_metric: A5

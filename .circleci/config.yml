@@ -11,14 +11,14 @@ jobs:
           command: |
             ln -f config.prod.yml config.yml
             rake pdf
-      - run: ls -l cognito_user_migration.pdf
+      - run: ls -l cognito_userpool_in_action.pdf
       - store_artifacts:
-          path: ~/work/cognito_user_migration.pdf
+          path: ~/work/cognito_userpool_in_action.pdf
           destination: pdf
       - persist_to_workspace:
           root: ~/work
           paths:
-            - cognito_user_migration.pdf
+            - cognito_userpool_in_action.pdf
   deploy:
     docker:
       - image: justincasetech/aws-cli:1.16.186-jq1.6-git
@@ -26,7 +26,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/work
-      - run: aws s3 cp cognito_user_migration.pdf s3://hiroga-cognito-user-migration/cognito_user_migration.pdf --acl public-read
+      - run: aws s3 cp cognito_userpool_in_action.pdf s3://hiroga-cognito-user-migration/cognito_userpool_in_action.pdf --acl public-read
 
 workflows:
   version: 2
