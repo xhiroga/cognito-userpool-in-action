@@ -6,7 +6,7 @@
 
 
 =={sec-ext} ユーザー移行Lambdaトリガーのアーキテクチャ
-ユーザー移行Lambdaトリガーの処理フロー（@<img>{architecture_1}）をご紹介します。  
+ユーザー移行Lambdaトリガーの処理フロー（@<img>{user_migration_lambda}）をご紹介します。  
 
 //image[user_migration_lambda][ユーザー移行Lambdaトリガーの処理フロー][scale=0.8]
 

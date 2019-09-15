@@ -342,7 +342,7 @@ pdfmaker:
   colophon: true
   #
   # 表紙に配置し、書籍の影絵にも利用する画像ファイル。同人誌の印刷では一般的に、表紙は本文と別ファイルにするので、ここはnullにする。
-  coverimage: null
+  # coverimage: null
   #
   # pdfmaker:階層を使うものはここまで
 
