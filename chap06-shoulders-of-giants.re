@@ -1,7 +1,7 @@
 = 巨人の肩の上に乗る
 
 //abstract{
-本書の執筆にあたって参考にさせていただいたドキュメント・ブログをご紹介します。
+本書の執筆にあたって参考にさせていただいたドキュメント・ブログをご紹介します。本書のトピックについて理解を深めるために、ぜひご活用下さい。  
 //}
 
 
@@ -16,9 +16,12 @@ Federated Identityの開発者向けドキュメントです。@<br>{}
 UserPoolユーザー移行について取り上げられた講演資料です。@<br>{}
 
 @<b>{ブログ}@<br>{}
-@<href>{https://hackernoon.com/aws-cognito-user-pools-or-identity-pools-what-do-i-use-to-secure-my-api-1d69cfbe99e1, AWS Cognito User Pools or Identity Pools: what do I use to secure my API?}@<br>{}
+@<href>{https://dev.classmethod.jp/server-side/serverless/amazon-cognito-api-gateway-idtoken/, Developers.IO/ Amazon Cognito と仲良くなるために歴史と機能を整理したし、 Cognito User Pools と API Gateway の連携も試した}@<br>{}
 UserPoolとFederated Identityのどちらを使ったらいいの？という疑問に答えたブログです。@<br>{}
 
-@<href>{https://qiita.com/tmiki/items/f36edc6c7473f5baa398, 【Cognito】Amazon Cognito Identity SDK for JavaScriptで動くサンプルを作ってみた #1/2【JavaScript】}@<br>{}
+@<href>{https://hackernoon.com/aws-cognito-user-pools-or-identity-pools-what-do-i-use-to-secure-my-api-1d69cfbe99e1, HACKERNOON/ AWS Cognito User Pools or Identity Pools: what do I use to secure my API?}@<br>{}
+UserPoolとFederated Identityのどちらを使ったらいいの？という疑問に答えたブログです。@<br>{}
+
+@<href>{https://qiita.com/tmiki/items/f36edc6c7473f5baa398, Qiita/ 【Cognito】Amazon Cognito Identity SDK for JavaScriptで動くサンプルを作ってみた #1/2【JavaScript】}@<br>{}
 Cognitoを検証する際にはクライアントを用意する必要がありますが、そのためのクライアントを実装・公開した方の記事です。@<br>{}
 
