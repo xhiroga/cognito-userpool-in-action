@@ -14,9 +14,9 @@ UserPoolを利用したアーキテクチャと、開発・設定のポイント
 
 
 === UserPoolをユーザー認証・認可基盤として利用するケース
-UserPoolをクライアントによるユーザー認証とサーバーによるユーザー認証の両方で用いるケースです。
+UserPoolをクライアントによるユーザー認証とサーバーによるユーザー認証の両方で用いるケース（@<img>{architecture_1}）です。
 
-図: [ UserPool → API Gateway(UserPool認証) → バックエンド]
+//image[architecture_1][UserPoolをユーザー認証・認可基盤として利用するケース][scale=0.8]
 
 エンドユーザーはUserPoolに対してサインインを行い、クライアントはレスポンスとしてIDトークン・アクセストークン・リフレッシュトークンを受け取ります。  
 このとき、UserPoolにサインインする方法としては、UserPoolがホストするログイン画面を用いる方法と、クライアントがAWS-SDKを用いてUserPoolに認証をリクエストする方法の2通りがあります。
@@ -33,10 +33,10 @@ UserPoolにホストされるUIを使えばログイン画面を自前で実装�
 
 === UserPoolをユーザー認証基盤として利用し、認可に別サービスを用いるケース
 
-UserPoolをユーザー認証基盤として用い、認可は別のサービスに任せるケースです。認可を担うサービスとしては、例えばCognito Federated Identity, Authleteなどがあります。@<fn>{f5873f66}
+UserPoolをユーザー認証基盤として用い、認可は別のサービスに任せるケース（@<img>{architecture_2}）です。認可を担うサービスとしては、例えばCognito Federated Identity, Authleteなどがあります。@<fn>{f5873f66}
 //footnote[f5873f66][認可サービス側から見た場合、Semi-Hosted Serviceパターンにあたります。 https://qiita.com/TakahikoKawasaki/items/b2a4fc39e0c1a1949aab]
 
-図: [UserPool → ...]
+//image[architecture_2][UserPoolをユーザー認証・認可基盤として利用するケース][scale=0.8]
 
 エンドユーザーはUserPoolに対してサインインを行い、クライアントがレスポンスとしてIDトークン・アクセストークン・リフレッシュトークンを受け取るまでは前のケースと同じです。
 サービスによっては、エンドユーザーがAWSリソースに直接アクセスする、アクセス権限をクライアント別に設定するなど、UserPool単体だと対応しづらい要件があります。  

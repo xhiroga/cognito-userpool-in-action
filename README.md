@@ -7,12 +7,10 @@ https://hiroga-cognito-user-migration.s3-ap-northeast-1.amazonaws.com/cognito_us
 build at local
 ```
 # trial
-ln -f config.trial.yml config.yml
-docker-compose run --rm review && open cognito_userpool_in_action_trial.pdf
+ln -f config.trial.yml config.yml && docker-compose run --rm review && open cognito_userpool_in_action_trial.pdf
 
 # prod
-ln -f config.prod.yml config.yml
-docker-compose run --rm review && open cognito_userpool_in_action.pdf
+ln -f config.prod.yml config.yml && docker-compose run --rm review && open cognito_userpool_in_action.pdf
 ```
 
 #References
