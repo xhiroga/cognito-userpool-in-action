@@ -76,8 +76,7 @@ UserPoolには多くの設定があります。
 
 なお、カッコ内の英字はCloudFormationで定義する場合のプロパティ名です。
 
-==== 取り返しのつかない設定
-@<b>{エイリアス属性(AliasAttributes)}@<br>{}
+==== エイリアス属性(AliasAttributes)
 
 ユーザーがユーザー名以外にも、メールアドレスや電話番号でログインができるようにするための設定です。  
 この設定はデフォルトでメールアドレスのみが選択されており、しかも@<b>{後から変更できません}。必ず要件にあった設定になっているか確認してください。@<fn>{6552ebf2}@<br>{}
@@ -93,11 +92,9 @@ UserPoolには多くの設定があります。
 特別な要件がない限り、エイリアス属性として指定したほうが無難です。
 
 
-==== 意味が分かるとお得な設定
+==== ユーザーアカウントの有効期限(TemporaryPasswordValidityDays)
 
-@<b>{ユーザーアカウントの有効期限(TemporaryPasswordValidityDays)}@<fn>{32a91a58}@<br>{}
-
-簡単に言うと、アカウント作成時に設定された初期パスワードの有効期限です。@<br>{}
+簡単に言うと、アカウント作成時に設定された初期パスワードの有効期限です。@<fn>{32a91a58}@<br>{}
 
 UserPoolでは、管理者がユーザーアカウントの作成（サインアップ）をすることが可能です。  
 その際、管理者は初期パスワードを自由に指定することができます。また、初期パスワードはSMSやメール経由でエンドユーザーに送信されます。
@@ -109,7 +106,7 @@ UserPoolでは、管理者がユーザーアカウントの作成（サインア
 //footnote[32a91a58][ちなみに、2018年頃（詳細不明）までは UnusedAccountValidityDays というプロパティ名でした。やっぱり分かりづらかったのでしょう。]
 
 
-@<b>{メールの送信元(EmailConfiguration)}@<br>{}
+==== メールの送信元(EmailConfiguration)
 
 メールアドレスの検証や初期パスワードの送信などで、ユーザーにメールを送信することがあります。
 UserPoolではデフォルトのメールの設定がありますが、以下の理由から利用するのは開発環境などに限定したほうがよいでしょう。@<fn>{993B91D2}@<br>{}
@@ -120,7 +117,7 @@ UserPoolではデフォルトのメールの設定がありますが、以下の
 //footnote[993B91D2][公式ドキュメントでも案内があります。@<href>{https://docs.aws.amazon.com/ja_jp/cognito/latest/developerguide/user-pool-email.html}]
 
 
-@<b>{管理者のみがユーザーを作成可能(AllowAdminCreateUserOnly)}@<br>{}
+==== 管理者のみがユーザーを作成可能(AllowAdminCreateUserOnly)
 
 クライアントがUserPoolに直接サインアップできなくなる設定です。サインアップの前に特定のビジネスロジックを動かしたい場合などで有効だと考えられます。@<br>{}
 
@@ -132,7 +129,8 @@ UserPoolではデフォルトのメールの設定がありますが、以下の
 
 === API利用のポイント
 
-==== GetUser と ListUsers の違い
+===== GetUser と ListUsers の違い
+
 UserPoolでは、ユーザーの検索に利用できるAPIが2種類用意されています。
 
  *  GetUser: ユーザー属性を取得する
@@ -143,7 +141,8 @@ UserPoolでは、ユーザーの検索に利用できるAPIが2種類用意さ�
 したがって、GetUserを使うようにしてください。
 
 
-=== ForgotPassword と AdminResetUserPassword の違い
+==== ForgotPassword と AdminResetUserPassword の違い
+
 UserPoolでは、ユーザーのパスワードをリセットするためのAPIが2種類用意されています。
 
  * ForgotPassword: ユーザーがパスワードをリセットする
@@ -155,20 +154,21 @@ UserPoolでは、ユーザーのパスワードをリセットするためのAPI
 
 
 === 構築・運用のポイント
+
 他のAWSのリソースと同じく、UserPoolもマネジメントコンソール、CLI、IaC(CloudFormationなど)の3通りの方法による作成が考えられると思います。
 要件に応じた構築・運用方法を選ぶことが大事です。それぞれの方法に対して、私の意見は以下のとおりです。@<br>{}
 
 ==== マネジメントコンソール
- - メリット: まずは作ってみたいとき、CLIやCloudFormationの雛形を作りたいときに有効です。
- - デメリット: 手作業で運用することになるため、作業量が多くなると大変。UserPoolクライアントを何種類も作成するのは苦労するかもしれません。
+ - Pros. まずは作ってみたいとき、CLIやCloudFormationの雛形を作りたいときに有効です。
+ - Cons. 手作業で運用することになるため、作業量が多くなると大変。UserPoolクライアントを何種類も作成するのは苦労するかもしれません。
 
 ==== CLI
- - メリット: UserPoolの全てのAPIに対応しています。
- - デメリット: update-user-pool の仕様として、値を指定しなかった属性は初期値が設定されてしまいます。したがって、結局は宣言的な書き方をすることになります。
+ - Pros. UserPoolの全てのAPIに対応しています。
+ - Cons. update-user-pool の仕様として、値を指定しなかった属性は初期値が設定されてしまいます。したがって、結局は宣言的な書き方をすることになります。
 
 ==== IaC(CloudFormationなど)
- - メリット: UserPoolクライアントやFederated Identityの関係性をコードで表現できます。Lambdaトリガーを設定する際に、都度ARNを調べないことが可能です。
- - デメリット: 2019-08-03時点で、ユーザー移行LambdaトリガーがCloudFormationに対応していません。
+ - Pros. UserPoolクライアントやFederated Identityの関係性をコードで表現できます。Lambdaトリガーを設定する際に、都度ARNを調べないことが可能です。
+ - Cons. 2019-08-03時点で、ユーザー移行LambdaトリガーがCloudFormationに対応していません。
 
 
 //note[コラム: usernameとsubの違い]{
