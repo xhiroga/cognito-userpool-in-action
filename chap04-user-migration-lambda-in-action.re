@@ -49,23 +49,4 @@ LambdaとUserPoolの接続方法に癖があるため注意しましょう。
 実は、マネジメントコンソールからUserPoolにユーザー移行Lambdaトリガーを設定する場合、Lambdaリソースポリシーは自動で設定されるようになっています。したがって、デプロイをCLIやソースコードで管理する場合は管理する場合は注意してください。
 
 もう一点、とても大事なポイントがあります。2019-09-08時点で、CloudFormationはUserPoolへのユーザー移行Lambdaトリガーの設定に対応していません。  
-したがって、UserPool本体をCloudFormationで管理している場合、UserPoolへのユーザー移行Lambdaトリガーの設定だけはCLIなどで設定するようにしてください。
-
-
-=={sec-ext} ユーザー移行Lambdaトリガーのサンプル
-
-最後に、ユーザー移行Lambdaトリガーのサンプル実装を掲載します。実際にユーザー移行を検討される方のご参考になれば幸いです。@<br>{}
-
-=== 構成
-
-以下の要素から構成されます。
- * ユーザー移行Lambdaトリガーのソースコード(user_migration.ts)
- * ユーザー移行LamndaトリガーのLambda関数, UserPool, AWS Lambdaリソースポリシー（cloudformation.yml）
- * ユーザー移行LambdaトリガーをUserPoolにセットするためのスクリプト（update_userpool.sh）
-
- 
-//emlist[user_migration.ts]{
-
-
-
-//}
+したがって、UserPool本体をCloudFormationで管理したい場合、CloudFormationのカスタムリソースを利用するか、UserPoolへのユーザー移行Lambdaトリガーの設定だけはCLIなどで設定するようにしてください。
