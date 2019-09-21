@@ -26,7 +26,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/work
-      - run: aws s3 cp cognito_userpool_in_action.pdf s3://hiroga-cognito-user-migration/cognito_userpool_in_action.pdf --acl public-read
+      - run: aws s3 cp cognito_userpool_in_action.pdf s3://hiroga-techbookfest/d2f64fa7-09cc-4570-b05d-dddd33248aa2 --acl public-read
 
 workflows:
   version: 2
