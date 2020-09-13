@@ -18,7 +18,7 @@ review_version: 2.0
 inherit: ["config-starter.yml"]
 
 # ブック名(ファイル名になるもの。ASCII範囲の文字を使用)
-bookname: cognito_userpool_in_action
+bookname: cognito-userpool-in-action
 # 記述言語。省略した場合はja
 language: ja
 
@@ -33,7 +33,7 @@ subtitle: |-
 # 著者名。「, 」で区切って複数指定できる
 # 読みを入れる例 aut: [{name: "青木峰郎", file-as: "アオキミネロウ"}, {name: "武藤健志", file-as: "ムトウケンシ"}, {name: "高橋征義", file-as: "タカハシマサヨシ"}, {name: "角征典", file-as: "カドマサノリ"}]
 aut:
-  - name:    Hiroaki Ogasawara（@hiroga_cc）
+  - name: Hiroaki Ogasawara（@hiroga_cc）
     file-as: Hiroaki Ogasawara
 
 # 以下はオプション
@@ -65,7 +65,7 @@ aut:
 # a-pht, pht: 撮影責任者
 # a-pbl, pbl: 出版社（発行所）
 # a-prt, prt: 印刷所
-prt: 
+prt:
 # a-red, red: 項目の枠組起草者
 # a-rev, rev: 評論者
 # a-spn, spn: 援助者
@@ -114,12 +114,12 @@ stylesheet: ["style.css"]
 # htmlversion: 4
 
 # 目次として抽出する見出しレベル
-toclevel: 3               # （部と）章と節と小節を目次に載せる
+toclevel: 3 # （部と）章と節と小節を目次に載せる
 
 # 採番の設定。採番させたくない見出しには「==[nonum]」のようにnonum指定をする
 #
 # 本文でセクション番号を表示する見出しレベル
-secnolevel: 2              # 章 (chapter) と節 (section) にだけ番号をつける
+secnolevel: 2 # 章 (chapter) と節 (section) にだけ番号をつける
 #secnolevel: 3             # 小節 (subsection) にも番号をつける
 
 # 以下のsecnolevelはまだ未実装。
@@ -143,7 +143,7 @@ toc: true
 # cover: null
 #
 # 表紙に配置し、書籍の影絵にも利用する画像ファイル。省略した場合はnull (画像を使わない)。画像ディレクトリ内に置いてもディレクトリ名は不要(例: cover.jpg)
-# coverimage: null
+coverimage: null
 #
 # 表紙の後に大扉ページを作成するか。省略した場合はtrue (作成する)
 titlepage: true
@@ -228,8 +228,8 @@ epubmaker:
   #
   # NCX目次の見出しレベルごとの飾り(配列で設定)。EPUB3ではNCXは作られない
   # ncxindent:
-  #- 
-  #- - 
+  #-
+  #- -
   # フックは、各段階で介入したいときのプログラムを指定する。自動で適切な引数が渡される
   # プログラムには実行権限が必要
   # ファイル変換処理の前に実行するプログラム。スタイルシートのコンパイルをしたいときなどに利用する。
@@ -291,27 +291,28 @@ texstyle: [reviewmacro, starter, mystyle, mytitlepage, mycolophon]
 #
 # LaTeX用のdocumentclassを指定する
 # texdocumentclass: ["jsbook", "uplatex,oneside"]
-texdocumentclass: ["jsbook",
+texdocumentclass: [
+    "jsbook",
     #"uplatex,papersize,twoside,b5j,10pt,openright" # B5 10pt 右起こし
     #"uplatex,papersize,twoside,b5j,10pt,openany"   # B5 10pt 両起こし
     #"uplatex,papersize,twoside,a5j,9pt,openright"  # A5  9pt 右起こし
     #"uplatex,papersize,twoside,a5j,9pt,openany"    # A5  9pt 両起こし
     #"uplatex,papersize,oneside,a5j,10pt,openany"   # A5 10pt 両起こし（タブレット向け）
-    "uplatex,papersize,oneside,a5j,10pt,openany"
-]
+    "uplatex,papersize,oneside,a5j,10pt,openany",
+  ]
 #
 # LaTeX用のコマンドを指定する
-# texcommand: "uplatex"
+texcommand: "uplatex"
 #
 # LaTeXのコマンドに渡すオプションを指定する
 # texoptions: null
-texoptions: "-halt-on-error -file-line-error"  # エラー時にインタラクティブモードにしない、エラー箇所はファイル名つきで表示
+texoptions: "-halt-on-error -file-line-error" # エラー時にインタラクティブモードにしない、エラー箇所はファイル名つきで表示
 #
 # LaTeX用のdvi変換コマンドを指定する(dvipdfmx)
-# dvicommand: "dvipdfmx"
+dvicommand: "dvipdfmx"
 #
 # LaTeX用のdvi変換コマンドのオプションを指定する
-dvioptions: "-d 5 -z 3"  # -z 9 だと画像を最大圧縮する（ただし時間がかかる）
+dvioptions: "-d 5 -z 3" # -z 9 だと画像を最大圧縮する（ただし時間がかかる）
 
 # 以下のパラメータを有効にするときには、
 # pdfmaker:
@@ -342,7 +343,7 @@ pdfmaker:
   colophon: true
   #
   # 表紙に配置し、書籍の影絵にも利用する画像ファイル。同人誌の印刷では一般的に、表紙は本文と別ファイルにするので、ここはnullにする。
-  # coverimage: null
+  # coverimage: cover.jpg
   #
   # pdfmaker:階層を使うものはここまで
 

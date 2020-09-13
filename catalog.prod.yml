@@ -6,9 +6,9 @@ CHAPS:
   - chap02-userpool-in-action.re
   - chap03-user-migration-basic.re
   - chap04-user-migration-lambda-in-action.re
-  - chap06-shoulders-of-giants.re
 
 APPENDIX:
+  - chap06-shoulders-of-giants.re
 
 POSTDEF:
   - chap99-postscript.re

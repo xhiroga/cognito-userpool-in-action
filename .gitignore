@@ -1,5 +1,7 @@
-cognito_userpool_in_action*-pdf
+cognito-userpool-in-action*-pdf
 config.yml
 *.pdf
+!cover.pdf
+!cover-trial.pdf
 .DS_Store
 .local
