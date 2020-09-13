@@ -1,9 +1,7 @@
 version: "3"
 services:
   review:
-    image:
-      kauplan/review2.5
+    image: kauplan/review2.5
     volumes:
       - $PWD:/work
-    entrypoint:
-      /bin/bash -c "cd /work; rake pdf"
+    entrypoint: /bin/bash -c "cd /work; export STARTER_TARGET=ebook; rake pdf"

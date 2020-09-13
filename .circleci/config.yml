@@ -6,10 +6,11 @@ jobs:
     working_directory: ~/work
     steps:
       - checkout
-      - run: 
+      - run:
           name: create pdf
           command: |
             ln -f config.prod.yml config.yml
+            export STARTER_TARGET=ebook; 
             rake pdf
       - run: ls -l cognito_userpool_in_action.pdf
       - store_artifacts:
