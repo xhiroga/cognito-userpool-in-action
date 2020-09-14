@@ -5,7 +5,7 @@
 //}
 
 
-=={sec-ext} ユーザー移行Lambdaトリガーのアーキテクチャ
+== ユーザー移行Lambdaトリガーのアーキテクチャ
 ユーザー移行Lambdaトリガーの処理フロー（@<img>{user_migration_lambda}）をご紹介します。  
 
 //image[user_migration_lambda][ユーザー移行Lambdaトリガーの処理フロー][scale=1.0]
@@ -28,7 +28,7 @@
 UserPoolのプロパティを移行前のユーザー認証基盤と突合し、テストケースを広く取って予防するようにしましょう。@<br>{}
 
 
-=={sec-ext} ユーザー移行Lambdaトリガーの開発
+== ユーザー移行Lambdaトリガーの開発
 
 === ユーザー移行Lambdaトリガーの実装
 通常のAWS Lambdaの開発同様に開発します。SAM@<fn>{3bc85a14}などを用いてローカルでの検証環境を構築するとよいでしょう。  

@@ -6,7 +6,7 @@
 //}
 
 
-=={sec-ext} Amazon Cognitoとは
+== Amazon Cognitoとは
 
 AWSが提供するユーザーの認証・認可を管理するためのマネージドサービスです。GCP@<fn>{b2a7e348}であればFirebase Authenticationが競合にあたります。  
 モバイルアプリやWebアプリケーションに認証・認可の機能を組み込む際に導入を検討される方が多いのではないでしょうか。
@@ -16,7 +16,7 @@ AWSが提供するユーザーの認証・認可を管理するためのマネ�
 
 Amazon Cognitoは、それぞれ特性の異なる3つのサービスの総称です。次節で詳しくご紹介します。
 
-=={sec-ext} Cognitoの3つのサービス
+== Cognitoの3つのサービス
 
 Amazon Cognitoには、以下の3つのサービスがあります。
 
@@ -62,7 +62,7 @@ IDプール、Cognito Identityと呼ばれることもあります。
 現在では、代わりにAWS AppSyncを利用することが公式に推奨されています。そのため、今後は利用すべきでないでしょう。本書でも以降は出てきません。
 
 
-=={sec-ext} UserPoolとFederated Identity
+== UserPoolとFederated Identity
 
 Amazon Cognitoのサービスの概要を掴んだところで、UserPoolとFederated Identityの違いを見ていきましょう。
 
