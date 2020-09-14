@@ -12,14 +12,14 @@ jobs:
             ln -f config.prod.yml config.yml
             export STARTER_TARGET=ebook; 
             rake pdf
-      - run: ls -l cognito_userpool_in_action.pdf
+      - run: ls -l cognito-userpool-in-action.pdf
       - store_artifacts:
-          path: ~/work/cognito_userpool_in_action.pdf
+          path: ~/work/cognito-userpool-in-action.pdf
           destination: pdf
       - persist_to_workspace:
           root: ~/work
           paths:
-            - cognito_userpool_in_action.pdf
+            - cognito-userpool-in-action.pdf
   deploy:
     docker:
       - image: justincasetech/aws-cli:1.16.186-jq1.6-git
@@ -27,7 +27,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/work
-      - run: aws s3 cp cognito_userpool_in_action.pdf s3://hiroga-techbookfest/d2f64fa7-09cc-4570-b05d-dddd33248aa2 --acl public-read
+      - run: aws s3 cp cognito-userpool-in-action.pdf s3://hiroga-techbookfest/d2f64fa7-09cc-4570-b05d-dddd33248aa2 --acl public-read
 
 workflows:
   version: 2
