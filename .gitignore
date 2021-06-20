@@ -5,3 +5,4 @@ config.yml
 !cover-trial.pdf
 .DS_Store
 .local
+*.log
