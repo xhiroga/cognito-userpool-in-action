@@ -27,4 +27,4 @@ Cognitoについて紹介する前半と、ユーザー移行について紹介�
 そうした点については、今後の版で随時更新させていただきたいのでお知らせいただけると幸いです。また、ご意見だけでなく質問も大歓迎です。連絡先を以下に記します。
 
  * Mail: @<href>{mailto://hiroga1030@gmail.com, hiroga1030@gmail.com}
- * Twitter: @<href>{https://twitter.com/hiroga_cc, @hiroga_cc}
+ * Twitter: @<href>{https://twitter.com/xhiroga, @xhiroga}

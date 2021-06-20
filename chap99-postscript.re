@@ -31,4 +31,4 @@ Cognitoの管理を前任者から引き継いだときは、「UserPoolとFeder
 本書のご意見やご感想など、ぜひツイートいただけると嬉しいです。Cognitoについてもっと話したいので、ぜひお気軽にご連絡ください。
 
  * Mail: hiroga1030@gmail.com
- * Twitter: @hiroga_cc
+ * Twitter: @xhiroga
