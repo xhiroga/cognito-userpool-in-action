@@ -47,4 +47,4 @@ make
 ## 商品リンク
 
 - [\[更新終了につき無償公開\] Cognito UserPool ユーザー移行入門 - さわら - BOOTH](https://hiroga.booth.pm/items/1560273)
-- [Cognito UserPool 実践入門 - さわら - 技術書点マーケット](https://techbookfest.org/product/6008295370260480)（販売終了）
+- [Cognito UserPool 実践入門 - さわら - 技術書典マーケット](https://techbookfest.org/product/6008295370260480)（販売終了）
