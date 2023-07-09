@@ -1,11 +1,15 @@
 PDF = cognito-userpool-in-action.pdf
 PDF_TRIAL = cognito-userpool-in-action-trial.pdf
 
-$(PDF):
-	ln -f config.prod.yml config.yml && docker-compose run --rm review && open $(PDF)
+.PHONY: all
 
-trial:
-	ln -f config.trial.yml config.yml && docker-compose run --rm review && open $(PDF_TRIAL)
+all: $(PDF) $(PDF_TRIAL)
+
+$(PDF):
+	ln -f config.prod.yml config.yml && docker-compose run --rm review
+
+$(PDF_TRIAL):
+	ln -f config.trial.yml config.yml && docker-compose run --rm review
 
 clean:
 	rm $(PDF) $(PDF_TRIAL)
